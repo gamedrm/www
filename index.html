@@ -1,0 +1,15 @@
+<script>
+
+  window.onload = function() {
+var xhr = new XMLHttpRequest();
+
+xhr.open("get","http://api.k780.com:88/?app=code.hanzi_pinyin&typeid=1&wd=%E9%9C%80%E8%A6%81%E8%BD%AC%E6%8D%A2%E7%9A%84%E6%B1%89%E5%AD%97&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json");
+xhr.send();
+xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4 && xhr.status == 200){
+        console.log(JSON.parse(xhr.responseText))
+    }
+}
+  }
+
+</script>
